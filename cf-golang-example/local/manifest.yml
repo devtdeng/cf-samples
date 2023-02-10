@@ -1,0 +1,11 @@
+applications:
+- name: cf-golang-client
+  instances: 1
+  memory: 128M
+  disk_quota: 1024M
+  buildpack: go_buildpack
+  stack: cflinuxfs3
+  health-check-type: process
+  env:
+    GOPACKAGENAME: CF_GOLANT_TEST
+    SERVER_URL: # Please add server app url here https://xxxxx/normal
